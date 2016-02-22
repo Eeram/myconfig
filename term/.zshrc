@@ -10,6 +10,10 @@ alias 'add'='git add -A'
 alias 'commit'='git commit -m'
 alias 'push'='git push origin master'
 
+# Java
+export JAVA7_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export JAVA8_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/mmaree/.oh-my-zsh
