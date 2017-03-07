@@ -1,6 +1,6 @@
 [user]
 	name = Mathieu Maree
-	email = mathieu.maree@gmail.com
+	email = mathieu.maree@withings.com
 [alias]
 	lg = log --graph --decorate --all --pretty=format:'%Cred%h%Creset  -  %C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     	lg1 = !"git lg1-specific --all"
