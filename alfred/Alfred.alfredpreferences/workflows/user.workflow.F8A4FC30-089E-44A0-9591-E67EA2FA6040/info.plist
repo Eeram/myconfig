@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.alfredapp.andrew.gettingstarted.clipboard</string>
+	<key>connections</key>
+	<dict>
+		<key>03ACB5E7-BAB9-4772-BBC5-CE9BB48FCAFA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C09BF0D5-4701-451E-A4E8-790C30376BC9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>1E1DF107-E105-4102-89D3-B170CE9730FB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>AFA7D4E9-0466-433D-89C6-E35003D27294</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>37B74AD8-818C-4F31-824E-761BF6EA406A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>946DFB81-1086-4113-B99B-53000F1DF556</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>AFA7D4E9-0466-433D-89C6-E35003D27294</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>431C4A49-105F-41F1-88D5-11D4B3988F4F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C09BF0D5-4701-451E-A4E8-790C30376BC9</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6BDCE62E-33C2-4FDF-921E-BFE9AB8F9069</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F43D7C06-EADF-4D10-ADEB-8486E793C310</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8C05B515-218A-4A7E-873D-918FDFE81457</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Andrew Pepperrell</string>
+	<key>description</key>
+	<string>This workflow shows how to integrate Alfred's workflows with the clipboard</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Clipboard - Getting Started</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>946DFB81-1086-4113-B99B-53000F1DF556</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>2</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>37B74AD8-818C-4F31-824E-761BF6EA406A</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>openwith</key>
+				<string></string>
+				<key>sourcefile</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openfile</string>
+			<key>uid</key>
+			<string>6BDCE62E-33C2-4FDF-921E-BFE9AB8F9069</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>adduuid</key>
+				<true/>
+				<key>allowemptyfiles</key>
+				<true/>
+				<key>createintermediatefolders</key>
+				<false/>
+				<key>filename</key>
+				<string>~/Desktop/AlfredClipboardHistory.txt</string>
+				<key>filetext</key>
+				<string>Latest item in the clipboard history:
+
+{clipboard:0}
+
+Previous item in the clipboard history:
+
+{clipboard:1}
+
+An older item from the clipboard history:
+
+{clipboard:100}</string>
+				<key>relativepathmode</key>
+				<integer>0</integer>
+				<key>type</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.writefile</string>
+			<key>uid</key>
+			<string>C09BF0D5-4701-451E-A4E8-790C30376BC9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>writeclipboard</string>
+				<key>subtext</key>
+				<string>Write 3 entries from the clipboard to the desktop</string>
+				<key>text</key>
+				<string>Write the clipboard to a file</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>03ACB5E7-BAB9-4772-BBC5-CE9BB48FCAFA</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>mergeclipboard</string>
+				<key>subtext</key>
+				<string>Advanced merging technique for clipboard items</string>
+				<key>text</key>
+				<string>Merge the Clipboard History</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>F43D7C06-EADF-4D10-ADEB-8486E793C310</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{clipboard:2}, {clipboard:1}...
+
+{clipboard:3}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>8C05B515-218A-4A7E-873D-918FDFE81457</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>cliptovar</string>
+				<key>subtext</key>
+				<string>Set two variables with clipboard items</string>
+				<key>text</key>
+				<string>Clipboard to Variable</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>1E1DF107-E105-4102-89D3-B170CE9730FB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>variables</key>
+				<dict>
+					<key>clip0</key>
+					<string>{clipboard:0}</string>
+					<key>clip1</key>
+					<string>{clipboard:1}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>AFA7D4E9-0466-433D-89C6-E35003D27294</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>'{query}', {allvars}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>431C4A49-105F-41F1-88D5-11D4B3988F4F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>This workflow demonstrates a few techniques to integrate the clipboard into your workflows.
+
+The easiest and most predictable way to get the clipboard or clipboard history into your workflow is to use an Arg and Var utility object, and set a variable to {clipboard} or {clipboard:x} where x is the history item number. This will fix the variable to the text at the point the workflow passes through this object.
+
+Note that while {clipboard} and {clipboard:0} both represent the latest clipboard entry, the value of these may differ. {clipboard:0} represents the latest item in Alfred's clipboard history whereas {clipboard} represents the current clipboard entry in macOS. The latter may not be compatible with Alfred's clipboard history.
+
+The clipboard history placeholders are available in most output objects, along with the Arg and Var / JSON utilities. Help subtext hints this throughout the configuration sheets.</string>
+	<key>uidata</key>
+	<dict>
+		<key>03ACB5E7-BAB9-4772-BBC5-CE9BB48FCAFA</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>note</key>
+			<string>Use keyword 'writeclipboard' to start this workflow which writes the 3 items from Alfred's clipboard history to the Desktop</string>
+			<key>xpos</key>
+			<integer>410</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
+		<key>1E1DF107-E105-4102-89D3-B170CE9730FB</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>4</integer>
+			<key>note</key>
+			<string>Use keyword 'cliptovar' to start this workflow which sets some variables as clipboard contents</string>
+			<key>xpos</key>
+			<integer>410</integer>
+			<key>ypos</key>
+			<integer>290</integer>
+		</dict>
+		<key>37B74AD8-818C-4F31-824E-761BF6EA406A</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>note</key>
+			<string>Set a hotkey such as ⌘⇧V to start this workflow with the current clipboard contents</string>
+			<key>xpos</key>
+			<integer>50</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
+		<key>431C4A49-105F-41F1-88D5-11D4B3988F4F</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>4</integer>
+			<key>note</key>
+			<string>Show the debugger to see the output</string>
+			<key>xpos</key>
+			<integer>710</integer>
+			<key>ypos</key>
+			<integer>320</integer>
+		</dict>
+		<key>6BDCE62E-33C2-4FDF-921E-BFE9AB8F9069</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>note</key>
+			<string>Open the file this workflow has created</string>
+			<key>xpos</key>
+			<integer>730</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
+		<key>8C05B515-218A-4A7E-873D-918FDFE81457</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>note</key>
+			<string>Merge the clipboard history, and paste to the front most app</string>
+			<key>xpos</key>
+			<integer>210</integer>
+			<key>ypos</key>
+			<integer>290</integer>
+		</dict>
+		<key>946DFB81-1086-4113-B99B-53000F1DF556</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>note</key>
+			<string>Paste the content of the clipboard as plain text to the front most app</string>
+			<key>xpos</key>
+			<integer>210</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
+		<key>AFA7D4E9-0466-433D-89C6-E35003D27294</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>4</integer>
+			<key>note</key>
+			<string>Set clipboard values to variables</string>
+			<key>xpos</key>
+			<integer>590</integer>
+			<key>ypos</key>
+			<integer>320</integer>
+		</dict>
+		<key>C09BF0D5-4701-451E-A4E8-790C30376BC9</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>note</key>
+			<string>Write the latest clipboard history item, the previous item and item 100 in Alfred's clipboard history to a random file on the Desktop</string>
+			<key>xpos</key>
+			<integer>570</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
+		<key>F43D7C06-EADF-4D10-ADEB-8486E793C310</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>note</key>
+			<string>Use keyword 'mergeclipboard' to start this workflow which merges the latest 3 items in the clipboard history with custom delimeters</string>
+			<key>xpos</key>
+			<integer>50</integer>
+			<key>ypos</key>
+			<integer>290</integer>
+		</dict>
+	</dict>
+	<key>version</key>
+	<string>1.0</string>
+	<key>webaddress</key>
+	<string>https://www.alfredapp.com</string>
+</dict>
+</plist>

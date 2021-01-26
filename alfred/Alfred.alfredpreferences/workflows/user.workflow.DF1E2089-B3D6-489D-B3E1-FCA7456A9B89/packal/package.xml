@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<workflow>
+  <name>DeepL translation</name>
+  <version>1.1.0</version>
+  <bundle>com.skoda091.deepl-translation</bundle>
+  <updated>1512380357</updated>
+  <file>deepl-1.1.0.alfredworkflow</file>
+</workflow>

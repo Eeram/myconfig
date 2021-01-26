@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>customSites</key>
+	<dict>
+		<key>2AD80E99-3107-4EDF-BF3F-43897A2533F6</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>sens</string>
+			<key>text</key>
+			<string>Search SensCritique for '{query}'</string>
+			<key>url</key>
+			<string>https://www.senscritique.com/search?q={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>71651461-140E-49D6-AA87-E90A00B830E7</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>dribbble</string>
+			<key>text</key>
+			<string>Open Dribbble</string>
+			<key>url</key>
+			<string>https://dribbble.com</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>9B35E958-F177-4A06-97DA-F21E1F3CC21B</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>dribbble</string>
+			<key>text</key>
+			<string>Search Dribbble for '{query}'</string>
+			<key>url</key>
+			<string>https://dribbble.com/search/{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "Account \n\nSteps to reproduce\n\nEncountered behavior\n\nExpected behavior",
+    "uid" : "B42FF424-E356-49D3-86D4-1388E7558D67",
+    "name" : "Bug template",
+    "keyword" : "bug"
+  }
+}

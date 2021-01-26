@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.alfredapp.vero.gettingstarted.listfilter</string>
+	<key>connections</key>
+	<dict>
+		<key>97EA3280-A6FD-40B9-8A2F-72B37144B52F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EDB042E5-125B-49ED-8B5B-D336C45E5473</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Vero Pepperrell</string>
+	<key>description</key>
+	<string>Learn how to use the List Filter object to create a list you can select from</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>List Filter - Getting Started</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>largetypetext</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.largetype</string>
+			<key>uid</key>
+			<string>EDB042E5-125B-49ED-8B5B-D336C45E5473</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>fixedorder</key>
+				<true/>
+				<key>items</key>
+				<string>[{"title":"Great!","arg":"I'm feeling great!"},{"title":"Awesome!","arg":"I feel awesome!"},{"title":"Snazzy!","arg":"I'm feeling... oooh, snazzy!"}]</string>
+				<key>keyword</key>
+				<string>feeling</string>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Show how I'm feeling in Large Type!</string>
+				<key>title</key>
+				<string>How are you feeling?</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.listfilter</string>
+			<key>uid</key>
+			<string>97EA3280-A6FD-40B9-8A2F-72B37144B52F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>The List Filter object allows you to pre-define options and pass it on to the next object.
+
+In this workflow, you can choose from the list by using the keyword "feeling". You'll see options in Alfred's results, and selecting one of the results will make the relevant argument appear in Large Type on your screen.
+
+For more advanced use of the List Filter object, take a look at the "To-do list using List Filters" example workflow.</string>
+	<key>uidata</key>
+	<dict>
+		<key>97EA3280-A6FD-40B9-8A2F-72B37144B52F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>50</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
+		<key>EDB042E5-125B-49ED-8B5B-D336C45E5473</key>
+		<dict>
+			<key>xpos</key>
+			<integer>260</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
+	</dict>
+	<key>version</key>
+	<string>1.0</string>
+	<key>webaddress</key>
+	<string>https://www.alfredapp.com</string>
+</dict>
+</plist>
