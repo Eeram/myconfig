@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.mathieumaree.alfred.chrometest</string>
+	<key>connections</key>
+	<dict>
+		<key>4A3312E2-0003-42DE-8C8D-ACFD06C8B10C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E6A01AAD-8945-4B84-A635-1813948CCF13</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Mathieu Marée</string>
+	<key>description</key>
+	<string></string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Chrome Test</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>copyurl</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Copy URL</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>4A3312E2-0003-42DE-8C8D-ACFD06C8B10C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>title=$(/usr/local/bin/wget -q -O - "$url" | grep -io "&lt;title.*&gt;*&lt;/title&gt;" | sed -e 's/&lt;[^&gt;]*&gt;//g' | head -n1)
+echo "title = $title"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>4711520C-4AD0-4EA6-8A84-9B1B2562D0F6</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+Application('Google Chrome').windows[0].activeTab.name()
+Application('Google Chrome').windows[0].activeTab.url()
+// "Chromium" Example:
+Application('Chromium').windows[0].activeTab.name()
+Application('Chromium').windows[0].activeTab.url()
+
+// Webkit variants include "Safari", "Webkit".
+// Specific editions are valid, including "Safari Technology Preview".
+// "Safari" Example:
+Application('Safari').documents[0].name()
+Application('Safari').documents[0].url()
+// "Webkit" Example:
+Application('Webkit').documents[0].name()
+Application('Webkit').documents[0].url()
+	 const frontmost_app_name = Application('System Events').applicationProcesses.where({ frontmost: true }).name()[0]
+const frontmost_app = Application(frontmost_app_name)
+
+const chromium_variants = ['Google Chrome', 'Chromium', 'Opera', 'Vivaldi', 'Brave Browser', 'Microsoft Edge']
+const webkit_variants = ['Safari', 'Webkit']
+
+if (chromium_variants.some(app_name =&gt; frontmost_app_name.startsWith(app_name))) {
+  var current_tab_title = frontmost_app.windows[0].activeTab.name()
+  var current_tab_url = frontmost_app.windows[0].activeTab.url()
+} else if (webkit_variants.some(app_name =&gt; frontmost_app_name.startsWith(app_name))) {
+  var current_tab_title = frontmost_app.documents[0].name()
+  var current_tab_url = frontmost_app.documents[0].url()
+} else {
+  throw new Error('You need a supported browser as your frontmost app')
+}
+
+current_tab_url + '\n' + current_tab_title
+end alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>E6A01AAD-8945-4B84-A635-1813948CCF13</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>4711520C-4AD0-4EA6-8A84-9B1B2562D0F6</key>
+		<dict>
+			<key>xpos</key>
+			<integer>340</integer>
+			<key>ypos</key>
+			<integer>150</integer>
+		</dict>
+		<key>4A3312E2-0003-42DE-8C8D-ACFD06C8B10C</key>
+		<dict>
+			<key>xpos</key>
+			<integer>110</integer>
+			<key>ypos</key>
+			<integer>150</integer>
+		</dict>
+		<key>E6A01AAD-8945-4B84-A635-1813948CCF13</key>
+		<dict>
+			<key>xpos</key>
+			<integer>330</integer>
+			<key>ypos</key>
+			<integer>280</integer>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
