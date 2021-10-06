@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.wyudong.ShowMacDesktop</string>
+	<key>connections</key>
+	<dict>
+		<key>CDCA84F4-9E70-406C-951F-7BECF0AEB693</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1C36EAA8-2F61-4C9A-B3DC-1A80F4254687</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Wang Yudong</string>
+	<key>description</key>
+	<string>Minimize all windows</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Show Mac Desktop</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>2</integer>
+				<key>hotmod</key>
+				<integer>1703936</integer>
+				<key>hotstring</key>
+				<string>D</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>CDCA84F4-9E70-406C-951F-7BECF0AEB693</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+    tell application "Finder" to activate
+    tell application "System Events" to keystroke "h" using {command down, option down}
+    tell application "Finder" to activate
+    tell application "System Events" to keystroke "m" using {command down, option down}
+end alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>1C36EAA8-2F61-4C9A-B3DC-1A80F4254687</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string># Usage
+
+Press `⌘+D` to Show Desktop - a shortcut to minimize all the on-screen windows. Also you can assign the hotkey you preferred.
+
+# How it works
+
+A hotkey combining two-step action:
+
+1. Activate Finder and hide all other apps by `⌘+⌥+H`.
+2. Activate Finder and minimize the front app by `⌘+⌥+M`.</string>
+	<key>uidata</key>
+	<dict>
+		<key>1C36EAA8-2F61-4C9A-B3DC-1A80F4254687</key>
+		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
+			<key>ypos</key>
+			<real>190</real>
+		</dict>
+		<key>CDCA84F4-9E70-406C-951F-7BECF0AEB693</key>
+		<dict>
+			<key>xpos</key>
+			<integer>100</integer>
+			<key>ypos</key>
+			<real>190</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>wyudong.com</string>
+</dict>
+</plist>

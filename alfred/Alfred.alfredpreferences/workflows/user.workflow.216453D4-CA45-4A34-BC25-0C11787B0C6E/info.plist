@@ -239,9 +239,9 @@ fi</string>
 				<key>keyword</key>
 				<string>ic</string>
 				<key>subtext</key>
-				<string></string>
+				<string>Open browser frontmost tabs in private windows</string>
 				<key>text</key>
-				<string>Open this tab in private window</string>
+				<string>IncognitoClone</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
@@ -279,7 +279,8 @@ if (chromium_variants.some(app_name =&gt; frontmost_app_name.startsWith(app_name
   frontmost_app.Window({ mode: 'incognito' }).make()
   frontmost_app.windows[0].activeTab.url = current_tab_url
 } else if (webkit_variants.some(app_name =&gt; frontmost_app_name.startsWith(app_name))) {
-  const current_tab_url = frontmost_app.documents[0].url()
+  const current_tab_url = frontmost_app.windows[0].currentTab.url()
+  if (close_current) frontmost_app.windows[0].currentTab.close()
 
   try {
     frontmost_process.menuBars[0].menuBarItems.byName(webkit_menu[0])
@@ -288,9 +289,7 @@ if (chromium_variants.some(app_name =&gt; frontmost_app_name.startsWith(app_name
     throw new Error('Unable to find menu item. Verify that the "webkit_menu_path" variable has the correct two-step path, separated by a comma, with the exact names of the items')
   }
 
-  if (close_current) frontmost_app.documents[0].close()
-
-  frontmost_app.documents[0].url = current_tab_url
+  frontmost_app.windows[0].currentTab.url = current_tab_url
 } else {
   throw new Error('You need a supported browser as your frontmost app')
 }</string>
@@ -313,6 +312,8 @@ if (chromium_variants.some(app_name =&gt; frontmost_app_name.startsWith(app_name
 			<dict>
 				<key>argument</key>
 				<string></string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>close_tab</key>
@@ -331,6 +332,8 @@ if (chromium_variants.some(app_name =&gt; frontmost_app_name.startsWith(app_name
 			<dict>
 				<key>argument</key>
 				<string></string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>close_tab</key>
@@ -393,6 +396,8 @@ if (chromium_variants.some(app_name =&gt; frontmost_app_name.startsWith(app_name
 			<dict>
 				<key>argument</key>
 				<string></string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>close_tab</key>
@@ -411,6 +416,8 @@ if (chromium_variants.some(app_name =&gt; frontmost_app_name.startsWith(app_name
 			<dict>
 				<key>argument</key>
 				<string></string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>close_tab</key>
@@ -438,35 +445,35 @@ In addition, Webkit-based browsers do not support opening new private windows pr
 			<key>note</key>
 			<string>New profile window. Chromium-based.</string>
 			<key>xpos</key>
-			<integer>400</integer>
+			<integer>260</integer>
 			<key>ypos</key>
 			<integer>210</integer>
 		</dict>
 		<key>67D2781F-8C6C-47C6-9CB0-418A80B12D94</key>
 		<dict>
 			<key>xpos</key>
-			<integer>240</integer>
+			<integer>185</integer>
 			<key>ypos</key>
-			<integer>270</integer>
+			<integer>310</integer>
 		</dict>
 		<key>972C5BD5-BBF1-47A0-A92D-5EC40578BA1E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>240</integer>
+			<integer>185</integer>
 			<key>ypos</key>
-			<integer>20</integer>
+			<integer>50</integer>
 		</dict>
 		<key>B87F8E59-81FA-4464-AA57-9D4A4578B362</key>
 		<dict>
 			<key>xpos</key>
-			<integer>240</integer>
+			<integer>185</integer>
 			<key>ypos</key>
-			<integer>210</integer>
+			<integer>240</integer>
 		</dict>
 		<key>D1C78EAD-183B-46FC-93DD-CE9D62824D4D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>10</integer>
+			<integer>25</integer>
 			<key>ypos</key>
 			<integer>20</integer>
 		</dict>
@@ -477,23 +484,23 @@ In addition, Webkit-based browsers do not support opening new private windows pr
 			<key>note</key>
 			<string>OneUpdater</string>
 			<key>xpos</key>
-			<integer>650</integer>
+			<integer>435</integer>
 			<key>ypos</key>
 			<integer>20</integer>
 		</dict>
 		<key>F8CC16BF-1B35-4056-B47E-07EBE41A4384</key>
 		<dict>
 			<key>xpos</key>
-			<integer>240</integer>
+			<integer>185</integer>
 			<key>ypos</key>
-			<integer>80</integer>
+			<integer>125</integer>
 		</dict>
 		<key>F91EA669-611F-436A-89B4-0D448347CCB6</key>
 		<dict>
 			<key>note</key>
 			<string>Incognito or Private window. Chromium-based or Webkit-based.</string>
 			<key>xpos</key>
-			<integer>400</integer>
+			<integer>260</integer>
 			<key>ypos</key>
 			<integer>20</integer>
 		</dict>
@@ -504,7 +511,7 @@ In addition, Webkit-based browsers do not support opening new private windows pr
 		<string>File, New Private Window</string>
 	</dict>
 	<key>version</key>
-	<string>20.6</string>
+	<string>21.1</string>
 	<key>webaddress</key>
 	<string>http://vitorgalvao.com/</string>
 </dict>

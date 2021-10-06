@@ -21,16 +21,16 @@
         "font" : "System",
         "color" : "#000000E5"
       },
-      "iconPaddingHorizontal" : 14,
+      "iconPaddingHorizontal" : 16,
       "paddingVertical" : 12,
       "iconSize" : 32
     },
     "search" : {
-      "paddingVertical" : 3,
+      "paddingVertical" : 8,
       "background" : "#FFFFFF00",
       "spacing" : 13,
       "text" : {
-        "size" : 34,
+        "size" : 37,
         "colorSelected" : "#000000FF",
         "font" : "System Light",
         "color" : "#000000FF"
@@ -44,7 +44,7 @@
       "borderPadding" : 0,
       "borderColor" : "#0000007F",
       "blur" : 10,
-      "roundness" : 3,
+      "roundness" : 12,
       "paddingVertical" : 4
     },
     "credit" : "Mathieu",
