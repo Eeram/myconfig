@@ -1,0 +1,16 @@
+# macOS system files
+.DS_Store
+.DS_Store?
+.AppleDouble
+.LSOverride
+
+# macOS resource forks
+__MACOSX/
+
+# Thumbnail files
+._*
+
+# Spotlight and Finder metadata
+.metadata_never_index
+.fseventsd
+.Trashes
